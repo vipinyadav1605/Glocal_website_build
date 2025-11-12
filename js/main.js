@@ -117,5 +117,33 @@
         ],
     });
     
+
+      $.getScript("https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js", function () {
+        emailjs.init("YOUR_PUBLIC_KEY"); // 🔹 Replace with your EmailJS public key
+
+        // Ensure header is loaded first
+        $(document).on("submit", "#demoForm", function (e) {
+            e.preventDefault();
+
+            const params = {
+                name: $("#name").val(),
+                email: $("#email").val(),
+                phone: $("#phone").val(),
+                demoType: $("#demoType").val()
+            };
+
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", params)
+                .then(() => {
+                    alert(" Demo request sent successfully!");
+                    $("#demoForm")[0].reset();
+                    const modal = bootstrap.Modal.getInstance(document.getElementById('demoModal'));
+                    modal.hide();
+                })
+                .catch((error) => {
+                    console.error("EmailJS Error:", error);
+                    alert("Failed to send request. Please try again later.");
+                });
+        });
+    });
 })(jQuery);
 

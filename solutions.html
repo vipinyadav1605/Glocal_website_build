@@ -3,332 +3,193 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Dr.Dicom</title>
+    <title>DrDicom - Solutions</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
 
-    <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
-
-    <!-- Icon Font Stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-    <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet" />
-
-    <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Spinner Start -->
+    <!-- Spinner -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary m-1" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-        <div class="spinner-grow text-dark m-1" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-        <div class="spinner-grow text-secondary m-1" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+        <div class="spinner-grow text-primary m-1"></div>
+        <div class="spinner-grow text-dark m-1"></div>
+        <div class="spinner-grow text-secondary m-1"></div>
     </div>
-    <!-- Spinner End -->
 
+    <!-- Header Placeholder -->
+    <div id="header"></div>
 
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
-        <div class="row gx-0">
-            <div class="col-md-6 text-center text-lg-end">
-                <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
-                    <div class="me-3 pe-3 border-end py-2">
-                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>rakeshlakka@glocaldigital.co.in</p>
-                    </div>
-                    <div class="py-2">
-                        <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+919849807736</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
+    <!-- Solutions Page Content Start -->
 
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-        <a href="index.html" class="navbar-brand p-0">
-            <h1 class="m-0 text-primary"><img src="img/dr.dicom logo.jpeg" alt="DRDICOM" class="me-2" style="width: 90px; height: 70px;" /></i>Dr.Dicom</h1>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="solutions.html" class="nav-item nav-link active">Solutions</a>
-                <a href="industries.html" class="nav-item nav-link">Industries We Serve</a>
-                <a href="about.html" class="nav-item nav-link">About Us</a>
-                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
-            </div>
-            <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-            <a href="bookings.html" class="btn btn-primary py-2 px-4 ms-3">Book for a Demo</a>
-        </div>
+    <!-- Hero Section -->
+<div class="container-fluid bg-primary bg-gradient py-5 mb-5 text-center text-white wow fadeIn" data-wow-delay="0.1s">
+  <div class="container py-2">
+    <h1 class=" fw-bold mb-3 animated zoomIn">Our Solutions</h1>
+    <nav aria-label="breadcrumb" class="d-flex justify-content-center">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item">
+          <a href="index.html" class="text-white text-decoration-none fw-semibold">Home</a>
+        </li>
+        <li class="breadcrumb-item active text-white fw-semibold" aria-current="page">
+          Solutions
+        </li>
+      </ol>
     </nav>
-    <!-- Navbar End -->
-
-
-    <!-- Full Screen Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
-                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Full Screen Search End -->
-
-
-    <!-- Hero Start -->
-    <div class="container-fluid bg-primary py-5 hero-header mb-5">
-        <div class="row py-3">
-            <div class="col-12 text-center">
-                <h1 class="display-3 text-white animated zoomIn">Solutions</h1>
-                <a href="" class="h4 text-white">Home</a>
-                <i class="far fa-circle text-white px-2"></i>
-                <a href="" class="h4 text-white">Solutions</a>
-            </div>
-        </div>
-    </div>
-    <!-- Hero End -->
-
-
-    <!-- About Start -->
-   <!-- DICOM Paper Printing Solutions -->
-<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container">
-        <div class="row g-5">
-
-            <!-- Content -->
-            <div class="col-lg-7">
-                <div class="section-title mb-4">
-                    <h5 class="position-relative d-inline-block text-primary text-uppercase">Solution 01</h5>
-                    <h1 class="display-5 mb-0">DICOM Paper Printing Solutions</h1>
-                </div>
-
-                <h4 class="text-body fst-italic mb-4">
-                    High-quality A4/A3 DICOM printing for X-Ray, CT, MRI, and Ultrasound with clinically optimized templates.
-                </h4>
-
-                <p class="mb-4">
-                    Our printing solution eliminates the need for costly film printing and delivers sharp, 
-                    clear, and patient-friendly output. Ideal for diagnostics, referrals, and patient record management. 
-                    The system auto-adjusts contrast, brightness, and layout to ensure every scan is printed with the 
-                    highest medical-grade clarity.
-                </p>
-
-                <div class="row g-3">
-                    <div class="col-sm-6 wow zoomIn" data-wow-delay="0.3s">
-                        <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Crystal-clear imaging</h5>
-                        <p style="font-size:14px; margin-left:36px;">Optimized print quality with enhanced sharpness and detail.</p>
-                    </div>
-                    <div class="col-sm-6 wow zoomIn" data-wow-delay="0.6s">
-                        <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Cost-efficient workflow</h5>
-                        <p style="font-size:14px; margin-left:36px;">Reduce film printing costs and simplify daily operations.</p>
-                    </div>
-                </div>
-
-                <a href="bookings.html" class="btn btn-primary py-3 px-5 mt-4 wow zoomIn" data-wow-delay="0.6s">
-                    Request a Demo
-                </a>
-            </div>
-
-            <!-- Image -->
-            <div class="col-lg-5" style="min-height: 500px;">
-                <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100 rounded wow zoomIn"
-                        data-wow-delay="0.9s"
-                        src="img/background-image2.png"
-                        style="object-fit: cover;">
-                </div>
-            </div>
-
-        </div>
-    </div>
+  </div>
 </div>
 
 
+    <!-- DICOM Paper Printing Solutions -->
+  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+  <div class="container py-4">
+    <div class="row align-items-center g-5">
+      <!-- Left Text Section -->
+      <div class="col-lg-7">
+        <div class="mb-4">
+          <h6 class="text-uppercase text-primary fw-bold mb-2">Solution 01</h6>
+          <h2 class="fw-bold mb-3">DICOM Paper Printing Solutions</h2>
+          <p class="text-secondary fs-5 fst-italic mb-3">
+            High-quality A4/A3 DICOM printing for X-Ray, CT, MRI, and Ultrasound — with clinically optimized templates.
+          </p>
+          <p class="text-muted mb-4">
+            Our advanced printing system eliminates costly film printing while ensuring exceptional diagnostic clarity. Each scan is auto-enhanced for brightness, contrast, and precision — delivering crystal-clear, patient-friendly reports every time.
+          </p>
+        </div>
 
+        <!-- Features -->
+        <div class="row gy-3">
+          <div class="col-sm-6 wow zoomIn" data-wow-delay="0.3s">
+            <div class="d-flex align-items-start">
+              <i class="fa fa-check-circle text-primary fs-4 me-3 mt-1"></i>
+              <div>
+                <h6 class="fw-semibold mb-1">Crystal-clear Imaging</h6>
+                <p class="text-muted small mb-0">Optimized print quality with enhanced sharpness and detail.</p>
+              </div>
+            </div>
+          </div>
 
-<!-- Digital Link Exchange & Image Sharing -->
-<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-sm-6 wow zoomIn" data-wow-delay="0.5s">
+            <div class="d-flex align-items-start">
+              <i class="fa fa-check-circle text-primary fs-4 me-3 mt-1"></i>
+              <div>
+                <h6 class="fw-semibold mb-1">Cost-efficient Workflow</h6>
+                <p class="text-muted small mb-0">Reduce film printing costs and simplify daily operations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="mt-4 wow zoomIn" data-wow-delay="0.6s">
+          <a href="bookings.html" class="btn btn-primary px-4 py-2 rounded-pill">
+            Request a Demo
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Image Section -->
+      <div class="col-lg-5 wow zoomIn" data-wow-delay="0.8s">
+        <div class="position-relative">
+          <img src="img/background-image2.png" alt="DICOM Printing Solution"
+               class="img-fluid rounded shadow-sm" style="object-fit: cover; height: 420px; width: 100%;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Digital Link Exchange & Image Sharing -->
+   <div class="container-fluid py-5 bg-light wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
-        <div class="row g-5">
-
-            <!-- Image -->
-            <div class="col-lg-5" style="min-height: 500px;">
-                <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100 rounded wow zoomIn"
-                        data-wow-delay="0.9s"
-                        src="img/screenshotviewer.jpg"
-                        style="object-fit: cover;">
+        <div class="row align-items-center g-5">
+            
+            <!-- Left Image Section -->
+            <div class="col-lg-5 order-lg-1 order-2">
+                <div class="position-relative shadow rounded overflow-hidden wow zoomIn" data-wow-delay="0.3s">
+                    <img src="img/screenshotviewer.jpg" class="img-fluid rounded" alt="Digital Sharing" style="object-fit: cover; height: 100%; min-height: 480px;">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-10"></div>
                 </div>
             </div>
 
-            <!-- Content -->
-            <div class="col-lg-7">
+            <!-- Right Content Section -->
+            <div class="col-lg-7 order-lg-2 order-1">
                 <div class="section-title mb-4">
                     <h5 class="position-relative d-inline-block text-primary text-uppercase">Solution 02</h5>
-                    <h1 class="display-5 mb-0">Digital Link Exchange & Instant Image Sharing</h1>
+                    <h1 class="fw-bold mb-3">Digital Link Exchange & Instant Image Sharing</h1>
                 </div>
 
-                <h4 class="text-body fst-italic mb-4">
-                    Fast, secure, and mobile-friendly digital sharing — without CDs, pen drives, or delays.
+                <h4 class="text-secondary fst-italic mb-4">
+                    Experience seamless, secure, and mobile-friendly DICOM sharing — without CDs, pen drives, or physical copies.
                 </h4>
 
-                <p class="mb-4">
-                    Instead of providing physical copies or outdated media, instantly share medical images 
-                    and reports using encrypted links. Patients and doctors can access files in seconds 
-                    through any device — with zoom, view, and download options. Perfect for teleconsultation, 
-                    second opinions, and remote diagnostics.
+                <p class="mb-4 text-muted">
+                    Our digital sharing platform lets healthcare professionals and patients access DICOM images and reports instantly. Using encrypted links, users can securely view, zoom, and download studies on any device — ideal for second opinions, teleconsultations, and remote diagnostics. 
                 </p>
 
-                <div class="row g-3">
-                    <div class="col-sm-6 wow zoomIn" data-wow-delay="0.3s">
-                        <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Secure Access</h5>
-                        <p style="font-size:14px; margin-left:36px;">Encrypted links ensure data privacy and controlled sharing.</p>
+                <div class="row g-4">
+                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="fa fa-shield-alt text-primary fa-2x me-3"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-2">Secure Access</h5>
+                                <p class="small mb-0 text-muted">End-to-end encryption ensures complete data privacy and controlled access for patients and physicians.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-6 wow zoomIn" data-wow-delay="0.6s">
-                        <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Share Anywhere</h5>
-                        <p style="font-size:14px; margin-left:36px;">Send via WhatsApp, SMS, Email, QR code, or direct link.</p>
+
+                    <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="fa fa-share-alt text-primary fa-2x me-3"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-2">Share Anywhere</h5>
+                                <p class="small mb-0 text-muted">Easily share via WhatsApp, SMS, Email, QR code, or direct encrypted link — accessible on any device.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <a href="bookings.html" class="btn btn-primary py-3 px-5 mt-4 wow zoomIn" data-wow-delay="0.6s">
-                    Request a Demo
+                <a href="bookings.html" class="btn btn-primary py-3 px-5 mt-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <i class="fa fa-calendar-check me-2"></i> Request a Demo
                 </a>
             </div>
-
         </div>
     </div>
 </div>
 
-</div>
-
-    <!-- About End -->
-    
-
-    <!-- Newsletter Start -->
-    <div class="container-fluid position-relative pt-5 wow fadeInUp" data-wow-delay="0.1s" style="z-index: 1;">
-        <div class="container">
-            <div class="bg-primary p-5">
-                <form class="mx-auto" style="max-width: 600px;">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                        <button class="btn btn-dark px-4">Sign Up</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+  <!-- Newsletter Start -->
+  <div class="container-fluid position-relative pt-5 wow fadeInUp" data-wow-delay="0.1s" style="z-index: 1;">
+    <div class="container">
+      <!-- You can add newsletter content here -->
     </div>
-    <!-- Newsletter End -->
-    
+  </div>
+  <!-- Newsletter End -->
+    <!-- Footer Placeholder -->
+    <div id="footer"></div>
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style="margin-top: -75px;">
-        <div class="container pt-5">
-            <div class="row g-5 pt-4">
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-white mb-4">Quick Links</h3>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                        <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-white mb-4">Popular Links</h3>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                        <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-white mb-4">Get In Touch</h3>
-                    <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>
-Andal Nagar Moula-Ali, ECIL, Hyderabad-500040</p>
-                    <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>rakeshlakka@glocaldigital.co.in</p>
-                    <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+919849807736</p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-white mb-4">Follow Us</h3>
-                    <div class="d-flex">
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded" href="#"><i class="fab fa-instagram fw-normal"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid text-light py-4" style="background: #051225;">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">Glocal Digital Private Limited</a>. All Rights Reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+    <!-- jQuery and Loader Script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
 
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="lib/twentytwenty/jquery.event.move.js"></script>
-    <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
-
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
 

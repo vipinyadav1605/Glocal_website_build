@@ -1,0 +1,88 @@
+<!-- header.html -->
+<!-- Topbar Start -->
+<div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
+  <div class="row gx-0">
+    <div class="col-md-6 text-center text-lg-end">
+      <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
+        <div class="me-3 pe-3 border-end py-2">
+          <p class="m-0">
+            <i class="fa fa-envelope-open me-2"></i>rakeshlakka@glocaldigital.co.in
+          </p>
+        </div>
+        <div class="py-2">
+          <p class="m-0">
+            <i class="fa fa-phone-alt me-2"></i>+91 9849807736
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Topbar End -->
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+  <a href="index.html" class="navbar-brand p-0">
+    <h1 class="m-0 text-primary">
+      <img src="img/dr.dicom logo.jpeg" alt="DRDICOM" class="me-2" style="width: 90px; height: 70px;" />
+      DrDicom
+    </h1>
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav ms-auto py-0">
+      <a href="index.html" class="nav-item nav-link active">Home</a>
+      <a href="solutions.html" class="nav-item nav-link">Solutions</a>
+      <a href="industries.html" class="nav-item nav-link">Industries We Serve</a>
+      <a href="about.html" class="nav-item nav-link">About Us</a>
+      <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+    </div>
+    <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal">
+      <i class="fa fa-search"></i>
+    </button>
+<a href="#" class="btn btn-primary py-2 px-4 ms-3" data-bs-toggle="modal" data-bs-target="#demoModal">
+  Book a Demo
+</a>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+
+<!-- Book a Demo Modal -->
+<div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="demoModalLabel">Book a Demo</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="demoForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="phone" class="form-label">Mobile Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="demoType" class="form-label">Demo Requirement</label>
+            <textarea class="form-control" id="demoType" rows="3" placeholder="Describe what demo you want" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Send Request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
