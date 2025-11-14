@@ -1,23 +1,8 @@
 <!-- header.html -->
+
 <!-- Topbar Start -->
-<div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
-  <div class="row gx-0">
-    <div class="col-md-6 text-center text-lg-end">
-      <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
-        <div class="me-3 pe-3 border-end py-2">
-          <p class="m-0">
-            <i class="fa fa-envelope-open me-2"></i>rakeshlakka@glocaldigital.co.in
-          </p>
-        </div>
-        <div class="py-2">
-          <p class="m-0">
-            <i class="fa fa-phone-alt me-2"></i>+91 9849807736
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+
 <!-- Topbar End -->
 
 <!-- Navbar Start -->
@@ -33,22 +18,18 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav ms-auto py-0">
-      <a href="index.html" class="nav-item nav-link active">Home</a>
+      <a href="index.html" class="nav-item nav-link">Home</a>
       <a href="solutions.html" class="nav-item nav-link">Solutions</a>
       <a href="industries.html" class="nav-item nav-link">Industries We Serve</a>
       <a href="about.html" class="nav-item nav-link">About Us</a>
       <a href="contact.html" class="nav-item nav-link">Contact Us</a>
     </div>
-    <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal">
-      <i class="fa fa-search"></i>
-    </button>
-<a href="#" class="btn btn-primary py-2 px-4 ms-3" data-bs-toggle="modal" data-bs-target="#demoModal">
-  Book a Demo
-</a>
+    <a href="#" class="btn btn-primary py-2 px-4 ms-3" data-bs-toggle="modal" data-bs-target="#demoModal">
+      Book a Demo
+    </a>
   </div>
 </nav>
 <!-- Navbar End -->
-
 
 <!-- Book a Demo Modal -->
 <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
@@ -86,3 +67,35 @@
     </div>
   </div>
 </div>
+
+<!-- ✅ Active Page Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+    navLinks.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href === currentPage) {
+        link.classList.add("active", "text-primary", "fw-semibold");
+      } else {
+        link.classList.remove("active", "text-primary", "fw-semibold");
+      }
+
+      link.addEventListener("click", function () {
+        navLinks.forEach(l => l.classList.remove("active", "text-primary", "fw-semibold"));
+        this.classList.add("active", "text-primary", "fw-semibold");
+      });
+    });
+  });
+</script>
+
+<!-- ✅ Keep active link blue even after hover -->
+<style>
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link.active:hover,
+  .navbar-nav .nav-link.active:focus {
+    color: var(--bs-primary) !important;
+    font-weight: 600;
+  }
+</style>

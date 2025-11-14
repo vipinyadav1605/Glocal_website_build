@@ -118,32 +118,77 @@
     });
     
 
-      $.getScript("https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js", function () {
-        emailjs.init("YOUR_PUBLIC_KEY"); // 🔹 Replace with your EmailJS public key
+    $(document).on("submit", "#demoForm ,#messageForm", function (e) {
+    e.preventDefault();
 
-        // Ensure header is loaded first
-        $(document).on("submit", "#demoForm", function (e) {
-            e.preventDefault();
+    const data = {
+        name: $("#name").val(),
+        email: $("#email").val(),
+        phone: $("#phone").val(),
+        demoType: $("#demoType").val()
+    };
 
-            const params = {
-                name: $("#name").val(),
-                email: $("#email").val(),
-                phone: $("#phone").val(),
-                demoType: $("#demoType").val()
-            };
-
-            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", params)
-                .then(() => {
-                    alert(" Demo request sent successfully!");
-                    $("#demoForm")[0].reset();
-                    const modal = bootstrap.Modal.getInstance(document.getElementById('demoModal'));
-                    modal.hide();
-                })
-                .catch((error) => {
-                    console.error("EmailJS Error:", error);
-                    alert("Failed to send request. Please try again later.");
-                });
-        });
+fetch("http://localhost:8000/api/send-demo/", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+})
+    .then(res => res.json())
+    .then(res => {
+        if (res.message === "Emails sent successfully!") {
+            alert("Demo request sent successfully!");
+            $("#demoForm")[0].reset();
+            const modal = bootstrap.Modal.getInstance(document.getElementById('demoModal'));
+            modal.hide();
+        } else {
+            alert("Failed to send request. Please try again later.");
+        }
+    })
+    .catch(err => {
+        console.error(err);
+        alert("Failed to send request. Please try again later.");
     });
+});
 })(jQuery);
 
+
+
+
+ // Message form for Contact Us page
+$(document).on("submit", "#contactForm", function(e) {
+    e.preventDefault();
+
+    // Get values from new form
+    const data = {
+        name: $("#contactName").val().trim(),
+        email: $("#contactEmail").val().trim(),
+        phone: $("#contactPhone").val().trim(),      
+        subject: $("#contactSubject").val().trim(),
+        demoType: $("#contactMessage").val().trim() // backend still expects demoType field
+    };
+
+    // Simple validation
+    if (!data.name || !data.email || !data.phone || !data.subject || !data.demoType) {
+        alert("Please fill all fields before sending!");
+        return;
+    }
+
+    fetch("http://localhost:8000/api/send-demo/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(res => {
+        if (res.message === "Emails sent successfully!") {
+            alert("✅ Message sent successfully!");
+            $("#contactForm")[0].reset();
+        } else {
+            alert("❌ Failed to send message. Please try again later.");
+        }
+    })
+    .catch(err => {
+        console.error(err);
+        alert("⚠️ Something went wrong. Please try again later.");
+    });
+});

@@ -46,18 +46,28 @@
   <!-- Hero Start -->
  <!-- Hero Section -->
 <!-- Hero Section -->
-<div class="container-fluid bg-primary py-5 hero-header mb-5 position-relative overflow-hidden">
-  <!-- Overlay with gradient for visual depth -->
-  <div class="position-absolute top-0 start-0 w-100 h-100" 
-       style="background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.6) 100%); z-index: 1;"></div>
+<div class="container-fluid py-5 hero-header mb-5 position-relative overflow-hidden">
+  
+  <!-- Background image -->
+  <div class="position-absolute top-0 start-0 w-100 h-100"
+       style="background: url('img/bgimage2.jpeg') center/cover no-repeat; z-index: 0;"></div>
 
-  <div class="row py-5 justify-content-center align-items-center position-relative" style="z-index: 2;">
-    <div class="col-12 text-center">
-      <h1 class="display-4 fw-bold text-white mb-3 animated fadeInDown" 
-          style="letter-spacing: 1px; text-shadow: 0 3px 10px rgba(0,0,0,0.3);">
+  <!-- Transparent blue overlay -->
+  <div class="position-absolute top-0 start-0 w-100 h-100"
+       style="background: rgba(0, 123, 255, 0.45); z-index: 1;"></div>
+
+  <!-- Dark gradient overlay for text contrast -->
+  <div class="position-absolute top-0 start-0 w-100 h-100"
+       style="background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.6) 100%); z-index: 2;"></div>
+
+  <!-- Content -->
+  <div class="row justify-content-center align-items-center text-center position-relative" style="z-index: 3; min-height: 80px;">
+    <div class="col-lg-8 col-md-10">
+      <h1 class="display-5 fw-bold text-white mb-3 animated fadeInDown"
+          style="letter-spacing: 1px; text-shadow: 0 3px 8px rgba(0,0,0,0.4);">
         Our Services
       </h1>
-      <p class="text-white-50 fs-5 mb-4 animated fadeInUp" style="max-width: 600px; margin: 0 auto;">
+      <p class="text-white-50 fs-5 mb-4 animated fadeInUp" style="max-width: 700px; margin: 0 auto;">
         Explore DICOM solutions designed for smarter imaging, secure data flow, and seamless collaboration.
       </p>
       <nav aria-label="breadcrumb" class="animated fadeInUp" data-wow-delay="0.3s">
@@ -72,22 +82,20 @@
       </nav>
     </div>
   </div>
-
-  <!-- Subtle pattern or background image (optional) -->
-  <div class="position-absolute top-0 start-0 w-100 h-100" 
-       style="background: url('img/hero-pattern.png') center/cover no-repeat; opacity: 0.08; z-index: 0;"></div>
 </div>
+
+
 
 <!-- Hero End -->
 
 
 <!-- Services Section -->
-<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+<div class="container-fluid bg-light py-3 wow fadeInUp" data-wow-delay="0.1s">
   <div class="container">
     <!-- Section Heading -->
-    <div class="text-center mb-5">
-      <h5 class="text-uppercase text-primary fw-bold mb-2">Our Services</h5>
-      <h1 class="display-5 fw-bold mb-3">Transforming Medical Imaging with Innovation</h1>
+    <div class="text-center mb-3">
+      <h5 class="text-uppercase text-primary fw-bold mb-1">Our Services</h5>
+      <h1 class="display-4 fw-bold mb-3">Transforming Medical Imaging with Innovation</h1>
       <p class="text-muted mx-auto" style="max-width: 700px;">
         Explore a suite of intelligent, secure, and scalable MedTech solutions that empower hospitals, radiologists, and diagnostic centers to deliver exceptional patient care.
       </p>
@@ -96,7 +104,7 @@
     <!-- Service 1 -->
     <div class="row align-items-center g-5 mb-5 wow fadeInUp" data-wow-delay="0.2s">
       <div class="col-lg-6">
-        <img src="img/screenshotviewer.jpg" class="img-fluid rounded-3 shadow" alt="DICOM Viewer">
+        <img src="img/croppedimg.jpeg" class="img-fluid rounded-3 shadow" alt="DICOM Viewer">
       </div>
       <div class="col-lg-6">
         <h3 class="fw-bold mb-3 text-primary">DICOM Viewer & Image Analysis</h3>
@@ -114,7 +122,13 @@
     <!-- Service 2 -->
     <div class="row align-items-center g-5 mb-5 flex-lg-row-reverse wow fadeInUp" data-wow-delay="0.4s">
       <div class="col-lg-6">
-        <img src="img/backups.jpeg" class="img-fluid rounded-3 shadow" alt="DICOM Storage">
+<div class="container-fluid my-5 px-0">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <img src="img/backups.jpeg" class="img-fluid w-100 rounded-3 shadow" alt="DICOM Storage">
+    </div>
+  </div>
+</div>
       </div>
       <div class="col-lg-6">
         <h3 class="fw-bold mb-3 text-primary">Secure DICOM Storage & Backup</h3>
@@ -132,7 +146,13 @@
     <!-- Service 3 -->
     <div class="row align-items-center g-5 mb-5 wow fadeInUp" data-wow-delay="0.6s">
       <div class="col-lg-6">
-        <img src="img/report.jpeg" class="img-fluid rounded-3 shadow" alt="Report Generation">
+<div class="container-fluid my-5 px-0">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <img src="img/report.jpeg" class="img-fluid w-100 rounded-3 shadow" alt="Report Generation">
+    </div>
+  </div>
+</div>
       </div>
       <div class="col-lg-6">
         <h3 class="fw-bold mb-3 text-primary">Automated Report Generation</h3>
@@ -150,7 +170,13 @@
     <!-- Service 4 -->
     <div class="row align-items-center g-5 mb-5 flex-lg-row-reverse wow fadeInUp" data-wow-delay="0.8s">
       <div class="col-lg-6">
-        <img src="img/images for use.jpeg" class="img-fluid rounded-3 shadow" alt="DICOM Sharing">
+<div class="container-fluid my-5 px-0">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <img src="img/images for use.jpeg" class="img-fluid w-100 rounded-3 shadow" alt="DICOM Sharing">
+    </div>
+  </div>
+</div>
       </div>
       <div class="col-lg-6">
         <h3 class="fw-bold mb-3 text-primary">Fast DICOM Sharing & Collaboration</h3>
@@ -166,16 +192,7 @@
     </div>
 
     <!-- Demo CTA -->
-    <div class="text-center mt-5 wow fadeInUp" data-wow-delay="1s">
-      <div class="bg-primary text-white rounded-4 shadow p-5 mx-auto" style="max-width: 800px;">
-        <h3 class="fw-bold mb-3">Book a Demo Today</h3>
-        <p class="mb-3">Discover how Dr.DICOM enhances clinical efficiency, patient experience, and imaging precision.</p>
-        <h2 class="fw-bold mb-4">📞 +91 9849807736</h2>
-        <a href="bookings.html" class="btn btn-light text-primary fw-semibold px-5 py-3">
-          <i class="fa fa-calendar-check me-2"></i>Schedule a Demo
-        </a>
-      </div>
-    </div>
+    
   </div>
 </div>
 
